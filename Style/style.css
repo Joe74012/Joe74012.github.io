@@ -41,11 +41,11 @@ html {
     height: 70px;
 }
 .WhiteText {
-    font-family: "DM Sans", serif;
     font-weight: 500;
     color: white;
     display: flex;
     text-align: center;
+    font-family: "DM Sans", serif;
 }
 a {
     text-decoration: none;
