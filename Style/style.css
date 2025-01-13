@@ -96,7 +96,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130px;
+    height: 125px;
 }
 .Ronde-Frame-Container {
     border-radius: 1000px;
@@ -113,10 +113,14 @@ a {
 }
 .Text-Rij-Container {
     width: 100%;
-    height: 150px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.Text-Rij-Container-Midden {
+    width: 200px;
+    height: 100px;
 }
 .PurpleButton:hover {
     transform: translateY(-3px);
