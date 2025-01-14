@@ -9,12 +9,11 @@ html {
     background-color: #3a3838;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    justify-content: space-evenly;
 }
 .LogoBar {
-    width: 100px;
-    height: 80px;
+    width: 110px;
+    height: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -22,11 +21,14 @@ html {
 .LogoIconStart {
     width: 100px;
 }
-.PurpleButton {
-    background-color: #961eff;
+.PurpleButton, .Header-Purple-Button {
     border-radius: 10px;
-    border-style: none;
-    width: 110px;
+    border-color: #ae51ff;
+    background-color: #961eff;
+    border-style: solid;
+    border-width: 4px;
+    width: 120px;
+    height: 55px;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -68,15 +70,17 @@ a {
     width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     gap: 20.1px;
 }
 .Afbeelding-Van-Mezelf {
     width: 250px;
-    height: 270px;
-    border-radius: 40px;
-    border-width: 10px;
+    height: 260px;
+    border-radius: 100%;
+    border-color: #4b4b4b;
+    border-style: solid;
+    border-width: 6px;
 }
 .Center-Div-Kennis {
     display: flex;
@@ -88,8 +92,11 @@ a {
     background-color: #3a3838;
     width: 250px;
     height: 280px;
+    transition: 0.4s;
     border-radius: 10px;
-    transition: 0.2s;
+    border-color: #5e5e5e;
+    border-style: solid;
+    border-width: 4px;
 }
 .Div-Logo-Container-Rij {
     width: 100%;
@@ -122,16 +129,168 @@ a {
     width: 200px;
     height: 100px;
 }
-.PurpleButton:hover {
+.PurpleButton:hover, .Header-Purple-Button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 30px 2px rgb(156, 8, 255);
+    box-shadow: 0px 0px 30px 2px rgb(156, 8, 255);  
 }
 .Container:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 30px 2px rgb(156, 8, 255);
+    transform: rotate(4deg);
 }
-@media only screen and (max-width: 600px) {
+.topnav #myLinks {
+    display: none;
+}
+.topnav a.icon {
+    background-color: #961eff;
+    display: block;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+.menu {
+    display: none;
+    text-decoration: none;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #3a3838;
+    position: relative;
+  }
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+.topnav a:hover {
+    color: black;
+} 
+.active {
+    width: 80px;
+}
+.topnav {
+    display: none;
+}
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+  
+  /* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #282727;
+}
+  
+  /* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 8px;
+    background-color: #961eff;
+    width: 0%;
+}
 
+.Afbeelding-Van-Projecten {
+    width: 430px;
+    height: 300px;
+    border-radius: 40px;
+    border-color: #5e5e5e;
+    border-style: solid;
+    border-width: 4px;
+    transition: 0.2s;
+}
+
+.Afbeelding-Van-Projecten:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 30px 2px rgb(156, 8, 255);
+    transform: rotate(4deg);
+}
+@media only screen and (max-width: 842px) {
+    .progress-container {
+        display: none;
+    }
+    .Afbeelding-Rij {
+        width: 100%;
+        height: 430px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Beschrijving-Tekst {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .Afbeelding-Van-Mezelf {
+        width: 250px;
+        height: 270px;
+    }
+    .topnav {
+        display: block;
+    }
+    .Header-Purple-Button {
+        display: none;
+    }
+    .PurpleButton {
+        width: 120px;
+        height: 60px;
+        border-radius: 30px;
+    }
+    .Bar {
+        display: none;
+    }
+    i {
+        color: #ffffff;
+        font-size: xx-large;
+    }
+    .Center-Div-Kennis {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .Container {
+        background-color: #3a3838;
+        width: 250px;
+        height: 300px;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    .Onzichtbare-Rij {
+        width: 100%;
+        height: 100px;
+    }
+    .Div-Logo-Container-Rij {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 125px;
+    }
+    .Afbeelding-Van-Mezelf {
+        width: 200px;
+        height: 210px;
+        border-radius: 100%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Beschrijving-Tekst {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
 }

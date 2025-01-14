@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Joe Willems Portfolio</title>
     <link rel="stylesheet" href="Style/style.css">
+    <script src="JS/Functie.JS"></script>
     <link rel="icon" href="Images/Home.png" type="Images/jpg">
 </head>
 
@@ -21,61 +22,83 @@
     <!--Start van header-->
     <header>
         <div class="Bar">
+            <ul class="menu">
+                <li><a class="WhiteText" href="index.html">Home</a></li>
+                <li><a class="WhiteText" href="Projecten.html">Projecten</a></li>
+                <li><a class="WhiteText" href="OverMij.html">Over mij</a></li>
+                <li><a class="WhiteText" href="Contact.html">Contact</a></li>
+              </ul>
             <a href="index.html">
-                <button class="PurpleButton">
+                <button class="Header-Purple-Button">
                     <h3 class="BiggerWhiteText">Home</h3>
                 </button>
-
             </a>
             <a href="Kennis.html">
-                <button class="PurpleButton">
-                    <h3 class="BiggerWhiteText">Kennis</h3>
+                <button class="Header-Purple-Button">
+                    <h3 class="BiggerWhiteText">Projecten</h3>
                 </button>
             </a>
-            <div class="LogoBar">
-                <img class="LogoIconStart" src="Images/Logo.png" alt="Logo">
-            </div>
+            <img class="LogoIconStart" src="Images/Logo.png" alt="Website logo">
             <a href="OverMij.html">
-                <button class="PurpleButton">
-                    <h3 class="BiggerWhiteText">Over mij</h3>
+                <button class="Header-Purple-Button">
+                    <h3 class="BiggerWhiteText">Over mezelf</h3>
                 </button>
             </a>
             <a href="Contact.html">
-                <button class="PurpleButton">
+                <button class="Header-Purple-Button">
                     <h3 class="BiggerWhiteText">Contact</h3>
                 </button>
             </a>
-        </div>
+            <div class="header">
+                <div class="progress-container">
+                  <div class="progress-bar" id="myBar"></div>
+                </div>
+              </div>
         <!--Einde van header-->
+    </header>
+    <!--Start van mobiel header-->
+    <header>
+    <div class="topnav">
+        <img class="active" src="Images/Logo.png" alt="">
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a class="WhiteText" href="index.html">Home</a>
+          <a class="WhiteText" href="Projecten.html">Projecten</a>
+          <a class="WhiteText" href="OverMij.html">Over mezelf</a>
+          <a class="WhiteText" href="Contact.html">Contact</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+       <!--Einde van mobiel header-->
     </header>
     <!--Start van main-->
     <main>
         <div class="Onzichtbare-Rij"></div>
         <div class="Afbeelding-Rij">
+            <img class="Afbeelding-Van-Mezelf" src="Images/JoeWillems.png" alt="Een afbeelding van mezelf.">
             <div class="Beschrijving-Tekst">
-                <h1 class="BiggerWhiteText">Welkom 👋</h1>
-                <h2 class="WhiteText">Mijn naam is Joe Willems.</h2>
-                <h2 class="WhiteText">ik volg de opleiding Software Developer bij het ROC in Nijmegen. Ik zit nu in mijn 1e jaar, locatie Technovium. </h2>
+                <h2 class="BiggerWhiteText">👋 Mijn naam is Joe Martin Willems</h2>
+                <h2 class="WhiteText">Ik volg de opleiding Software developer op het ROC technovium, Ik ben 16 jaar oud en zit in het eerste jaar.</h2>
                 <a href="OverMij.html">
                     <button class="PurpleButton">
-                        <h3 class="BiggerWhiteText">Meer over mezelf</h3>
-                    </button>
-                    <button class="PurpleButton">
-                        <h3 class="BiggerWhiteText">Contact</h3>
+                        <h3 class="BiggerWhiteText">Meer informatie</h3>
                     </button>
                 </a>
             </div>
-            <img class="Afbeelding-Van-Mezelf" src="Images/JoeWillems.png" alt="Een afbeelding van mezelf.">
         </div>
         <div class="Onzichtbare-Rij"></div>
         <div class="Center-Div-Kennis">
-                <h1 class="BiggerWhiteText">Mijn kennis</h1>
+                <h1 class="BiggerWhiteText">Waar ik kennis mee heb</h1>
         </div>
+        <div class="Onzichtbare-Rij"></div>
         <div class="Center-Div-Kennis">
             <div class="Container">
                 <div class="Div-Logo-Container-Rij">
                     <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/Visual studio.png" alt="Het logo van Visual studio code software.">
+                        <img class="Logo-Ronde-Frame-Container" src="Images/Visual studio.png" alt="Het logo van Visual Studio Code Software.">
                     </div>
                 </div>
                 <div class="Text-Rij-Container">
@@ -83,30 +106,32 @@
                         <h3 class="WhiteText">Ik gebruik Visual Studio code om Websites te maken met code zoals CSS en HTML.</h3>
                     </div>
                 </div>
-            </div>
-            <div class="Container">
-                <div class="Div-Logo-Container-Rij">
-                    <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/Eclipse.png" alt="Het logo van eclipse software.">
+            </div>`
+            <div class="Center-Div-Kennis">
+                <div class="Container">
+                    <div class="Div-Logo-Container-Rij">
+                        <div class="Ronde-Frame-Container">
+                            <img class="Logo-Ronde-Frame-Container" src="Images/Eclipse.png" alt="Het logo van Eclipse IDE Software.">
+                        </div>
                     </div>
-                </div>
-                <div class="Text-Rij-Container">
-                    <div class="Text-Rij-Container-Midden">
-                        <h3 class="WhiteText">Ik gebruik Eclipse IDE om verschillende computerapplicaties te ontwikkelen met gebruik van de code taal java.</h3>
+                    <div class="Text-Rij-Container">
+                        <div class="Text-Rij-Container-Midden">
+                            <h3 class="WhiteText">Ik gebruik Eclipse om programma's te schrijven die taken uitvoeren, ik gebruik daar voor java.</h3>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="Container">
-                <div class="Div-Logo-Container-Rij">
-                    <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/Github.png" alt="Het logo van Github software.">
+                </div>`
+                <div class="Container">
+                    <div class="Div-Logo-Container-Rij">
+                        <div class="Ronde-Frame-Container">
+                            <img class="Logo-Ronde-Frame-Container" src="Images/Github.png" alt="Het logo van Github Software.">
+                        </div>
                     </div>
-                </div>
-                <div class="Text-Rij-Container">
-                    <div class="Text-Rij-Container-Midden">
-                        <h3 class="WhiteText">Ik gebruik Github om mijn Websites en projecten op te slaan en te publishen.</h3>
+                    <div class="Text-Rij-Container">
+                        <div class="Text-Rij-Container-Midden">
+                            <h3 class="WhiteText">Ik gebruik Github om mijn projecten op te slaan en te publishen op het internet.</h3>
+                        </div>
                     </div>
-                </div>
+                </div>       
             </div>
         </div>
         <div class="Onzichtbare-Rij"></div>
@@ -114,38 +139,52 @@
             <div class="Container">
                 <div class="Div-Logo-Container-Rij">
                     <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/Css.png" alt="Het logo van Visual studio code software.">
+                        <img class="Logo-Ronde-Frame-Container" src="Images/Css.png" alt="Het logo van CSS opmaak taal.">
                     </div>
                 </div>
                 <div class="Text-Rij-Container">
                     <div class="Text-Rij-Container-Midden">
-                        <h3 class="WhiteText">Ik gebruik CSS om websites tot leven te brengen met animaties, kleuren etc.</h3>
+                        <h3 class="WhiteText">Ik gebruik CSS om een website tot leven te brengen met kleuren en animaties.</h3>
                     </div>
                 </div>
+            </div>`
+            <div class="Center-Div-Kennis">
+                <div class="Container">
+                    <div class="Div-Logo-Container-Rij">
+                        <div class="Ronde-Frame-Container">
+                            <img class="Logo-Ronde-Frame-Container" src="Images/html.png" alt="Het logo van HTML opmaak taal.">
+                        </div>
+                    </div>
+                    <div class="Text-Rij-Container">
+                        <div class="Text-Rij-Container-Midden">
+                            <h3 class="WhiteText">Ik gebruik HTML om een prototype van een website te maken die nog geen kleuren of animaties heeft.</h3>
+                        </div>
+                    </div>
+                </div>`
+                <div class="Container">
+                    <div class="Div-Logo-Container-Rij">
+                        <div class="Ronde-Frame-Container">
+                            <img class="Logo-Ronde-Frame-Container" src="Images/Java.png" alt="Het logo van Java Programmeer taal.">
+                        </div>
+                    </div>
+                    <div class="Text-Rij-Container">
+                        <div class="Text-Rij-Container-Midden">
+                            <h3 class="WhiteText">Ik gebruik java om programma's te schrijven die taken uitvoeren.</h3>
+                        </div>
+                    </div>
+                </div>       
             </div>
-            <div class="Container">
-                <div class="Div-Logo-Container-Rij">
-                    <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/html.png" alt="Het logo van eclipse software.">
-                    </div>
-                </div>
-                <div class="Text-Rij-Container">
-                    <div class="Text-Rij-Container-Midden">
-                        <h3 class="WhiteText">Ik gebruik HTML om een layout van de website te maken die nog niet opgemaakt is door css</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="Container">
-                <div class="Div-Logo-Container-Rij">
-                    <div class="Ronde-Frame-Container">
-                        <img class="Logo-Ronde-Frame-Container" src="Images/Java.png" alt="Het logo van Github software.">
-                    </div>
-                </div>
-                <div class="Text-Rij-Container">
-                    <div class="Text-Rij-Container-Midden">
-                        <h3 class="WhiteText">Ik gebruik Java om programma's te schrijven die taken uitvoeren.</h3>
-                    </div>
-                </div>
+        </div>
+        <div class="Onzichtbare-Rij"></div>
+        <div class="Center-Div-Kennis">
+            <h1 class="BiggerWhiteText">Grote projecten</h1>
+        </div>
+        <div class="Onzichtbare-Rij"></div>
+        <div class="Afbeelding-Rij">
+            <img class="Afbeelding-Van-Projecten" src="Images/Mastermind&PinkGoose.png" alt="Een afbeelding van mijn projecten waar ik aan heb gewerkt.">
+            <div class="Beschrijving-Tekst">
+                <h2 class="BiggerWhiteText">Mastermind & PinkGoose</h2>
+                <h2 class="WhiteText">Pinkgoose is een website die ik heb gemaakt met CSS en html, mastermind is een programma die ik heb gemaakt met Java.</h2>
             </div>
         </div>
         <div class="Onzichtbare-Rij"></div>
